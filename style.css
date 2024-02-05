@@ -1,0 +1,173 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 22px;
+    font-family: "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans","Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.deleteBtn {
+    display: block;
+    width: 32px;
+    height: 32px;
+}
+
+.editBtn {
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin-right: 15px;
+}
+
+.header, .content, .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header, .footer {
+    background-color: steelblue;
+    color: white;
+}
+
+.content {
+    width: 100%;
+    padding: 0rem 1rem;
+    margin-top: 20px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.content ul {
+    width: 100%;
+    min-height: 60vh;
+}
+
+.content li {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.187);
+    margin-bottom: 5px;
+    padding: 0.25em 0.8em 0.25em 0.25em;
+}
+
+.content li input[type="checkbox"] {
+    width: 64px;
+    height: 64px;
+    cursor: pointer;
+}
+
+.content li label {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.content li img {
+    color: steelblue;
+    cursor: pointer;
+}
+
+.addItem {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.addItem form {
+    display: flex;
+    position: relative;
+    gap: 5px;
+}
+
+.addItem input[type="text"] {
+    flex-grow: 1;
+    font-size: 32px;
+    border-radius: 5px;
+    padding: 0.25em 0.25em;
+}
+
+.addItem img {
+    display: block;
+    width: calc(54px + 0.25em);
+    height: calc(54px + 0.25em);
+    cursor: pointer;
+}
+
+.searchItem {
+    display: flex;
+    gap: 5px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.searchItem input[type="text"] {
+    flex-grow: 1;
+    font-size: 32px;
+    border-radius: 5px;
+    padding: 0.25em 0.25em;
+    border-color: black;
+}
+
+@media screen and (max-width: 512px) {
+    html {
+        font-size: 16px;
+    }
+
+    .addItem input[type="text"] {
+        font-size: 22px;
+    }
+
+    .searchItem input[type="text"] {
+        font-size: 22px;
+    }
+
+    .content li input[type="checkbox"] {
+        width: 52px;
+        height: 52px;
+    }
+
+    .addItem img {
+        width: calc(44px + 0.25em);
+        height: calc(44px + 0.25em);
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .addItem input[type="text"] {
+        font-size: 16px;
+    }
+
+    .searchItem input[type="text"] {
+        font-size: 16px;
+    }
+
+    .content li input[type="checkbox"] {
+        width: 42px;
+        height: 42px;
+    }
+
+    .addItem img {
+        width: calc(40px + 0.25em);
+        height: calc(40px + 0.25em);
+    }
+
+    #p {
+        font-size: 1.8rem;
+    }
+}
